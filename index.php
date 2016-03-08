@@ -6,7 +6,7 @@ session_start(); //session_start() crea una sesión para ser usada mediante una 
 function verificar_login($email,$password) 
 { 
 
-	$mysqli = new mysqli("127.0.0.1", "root", "root", "PROGRAMACION_NETIII");
+	$mysqli = new mysqli("mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/", "adminLdsYnCD", "k6Cjr4ncxys5", "evidencia");
 if ($mysqli->connect_errno) {
     echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
